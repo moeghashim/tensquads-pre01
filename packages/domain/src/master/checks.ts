@@ -62,6 +62,12 @@ function readEvidence(value: unknown): GapEvidence | null {
 }
 
 // A market Result with no report: task.route or an empty payload. Progress Results keep their skill name.
+// A website Result counts in the building phase: a preview, or a failed build with no preview.
+// A failed build has no preview URL, so the preview check fails it and sends the task back once.
+export function isPageResult(event: { readonly from: string; readonly skill: string }): boolean {
+	return event.from === "website" && (event.skill === "site.preview" || event.skill === "task.route");
+}
+
 export function isResearchFailure(event: {
 	readonly from: string;
 	readonly skill: string;

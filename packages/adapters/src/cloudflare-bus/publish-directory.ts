@@ -5,7 +5,9 @@ import { drizzle } from "drizzle-orm/neon-serverless";
 import type { AppDatabase } from "../neon/postgres.ts";
 import { accounts, agents, mandates } from "../neon/schema.ts";
 
-const WEBSITE_ROLE = "Website builder";
+// The bootstrap script stores "Website builder". Sign-up stores the catalog role text.
+// Any other role, even with the id "website", is not the website builder.
+const WEBSITE_ROLES: ReadonlySet<string> = new Set(["Website builder", "Landing pages and site updates"]);
 const PUBLISH_SKILL = "website.publish";
 
 export interface PublishMandate {
@@ -68,7 +70,7 @@ async function websiteAgent(db: AppDatabase, accountId: string, agentId: string)
 		.select({ role: agents.role })
 		.from(agents)
 		.where(and(eq(agents.accountId, accountId), eq(agents.id, agentId)));
-	return rows[0]?.role === WEBSITE_ROLE;
+	return WEBSITE_ROLES.has(rows[0]?.role ?? "");
 }
 
 async function readStoredPublish(

@@ -445,3 +445,25 @@ test("a preview without an agent directory is not configured", async () => {
 		restore();
 	}
 });
+
+// Sign-up stores the catalog role text for the website builder. Its preview must be accepted.
+test("a signed-up website builder can store a preview", { timeout: 30_000 }, async () => {
+	const restore = guard();
+	const database = await openPglite();
+	const counted = countingPages();
+	try {
+		await seedAccount(database.db, "signed", [{ id: "website", role: "Landing pages and site updates" }]);
+		const env = createEnv({ pages: counted.pages, publishDirectory: directoryFromDatabase(database.db) });
+		const preview = await post(
+			env,
+			"/machine/preview",
+			{ accountId: "signed", agentId: "website", taskId: "page", html: HTML },
+			"signed",
+			"website",
+		);
+		assert.equal(preview.status, 200);
+	} finally {
+		await database.close();
+		restore();
+	}
+});
