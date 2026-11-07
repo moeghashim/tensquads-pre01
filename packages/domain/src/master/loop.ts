@@ -7,6 +7,7 @@ import {
 	checkPage,
 	checkPublished,
 	checkResearch,
+	isPageResult,
 	isResearchFailure,
 	NO_FINDING_TEXT,
 	NO_ITEMS_TEXT,
@@ -102,7 +103,6 @@ function coverSkill(id: string): Skill {
 function isRecord(value: unknown): value is Record<string, unknown> {
 	return value !== null && typeof value === "object" && !Array.isArray(value);
 }
-
 // An empty gap is an empty finding. The run stops in chat before any approval.
 function findingEmpty(raw: unknown): boolean {
 	return isRecord(raw) && typeof raw.gap === "string" && raw.gap.trim().length === 0;
@@ -557,7 +557,7 @@ export function createMaster(request: BusinessRequest, ports: MasterPorts) {
 		if (userSaidYes(event)) return onUserYes(event);
 		if (event.kind !== "Result" || event.to !== "master") return [];
 		if (state.phase === "research") return onResearchPhase(event);
-		if (event.skill === "site.preview" && state.phase === "building") return onPreview(event);
+		if (state.phase === "building" && isPageResult(event)) return onPreview(event);
 		if (event.skill === "site.publish" && state.phase === "publishing") return onPublish(event);
 		if (event.skill === "competition.watch" && state.phase === "watching") return onWatch(event);
 		return [];

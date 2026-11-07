@@ -12,7 +12,8 @@ const monitors = new Map<string, string>();
 const secrets = new Map<string, { readonly accountId: string; readonly secret: string }>();
 const DIRECTORY = "__monitors";
 const RESEARCHER_ID = "market";
-const RESEARCHER_ROLE = "Market researcher";
+// The bootstrap script stores "Market researcher". Sign-up stores the catalog role text.
+const RESEARCHER_ROLES: ReadonlySet<string> = new Set(["Market researcher", "Competitors and positioning"]);
 
 interface MonitorDirectory {
 	idFromName(name: string): unknown;
@@ -61,7 +62,7 @@ async function readDirectory(env: MonitorEnv, monitorId: string): Promise<string
 }
 
 function isResearcher(id: string, role: string): boolean {
-	return id === RESEARCHER_ID && role === RESEARCHER_ROLE;
+	return id === RESEARCHER_ID && RESEARCHER_ROLES.has(role);
 }
 
 async function storeDatabaseSecret(
