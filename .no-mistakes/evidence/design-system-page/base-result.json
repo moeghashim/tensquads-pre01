@@ -1,0 +1,5 @@
+{
+  "result": "pass",
+  "live": true,
+  "scenario": "Build older ref without design system: omit design page and review card, retain working review index"
+}
