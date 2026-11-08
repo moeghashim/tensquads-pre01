@@ -114,7 +114,7 @@ jobs:
           ln -sfn "$PWD/tools/agent-kit/node_modules/@tensquads/agent-kit" node_modules/@tensquads/agent-kit
 
       - name: Audit changed code
-        uses: fallow-rs/fallow@d052786ef2baf78fa5b196f06dbccd6f0d26798e # v3.38.1
+        uses: fallow-rs/fallow@90833be1e8d12202e6f6084c417585e3b78005ce # v3.40.0
         with:
           command: audit
           gate: new-only
@@ -190,7 +190,7 @@ jobs:
           key: mise-${{ runner.os }}-${{ hashFiles('mise.lock') }}
 
       - name: Install mise
-        uses: jdx/mise-action@6612f0ef07ed2a736cd1e00a94a065522dd41195 # v5.2.5
+        uses: jdx/mise-action@f5be966e4a917d54244728e6a5fdcd1d93a35e6c # v5.2.6
         with:
           install: false
           cache: false
@@ -223,7 +223,7 @@ jobs:
       # Traces and screenshots from failed browser tests. Kept seven days.
       - name: Keep browser test evidence
         if: failure()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: browser-test-results-${{ matrix.os }}
           path: test-results/
