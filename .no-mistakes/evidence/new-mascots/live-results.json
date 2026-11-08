@@ -1,0 +1,33 @@
+[
+  {
+    "route": "/review/characters",
+    "rendered": 49,
+    "screenshot": "characters-1440.png"
+  },
+  {
+    "route": "/matrix",
+    "rendered": 100,
+    "screenshot": "all-states.png"
+  },
+  {
+    "route": "/sizes",
+    "rendered": 80,
+    "screenshot": "size-boundaries.png"
+  },
+  {
+    "check": "All 100 accessible names; reduced motion stops blink; normal motion enables blink",
+    "pass": true
+  },
+  {
+    "check": "All 80 avatar boxes preserve requested size, including 63/64 crop boundary",
+    "pass": true
+  },
+  {
+    "check": "Homepage and signup squads render without horizontal overflow at 1440px",
+    "pass": true
+  },
+  {
+    "check": "Homepage and signup squads render without horizontal overflow at 390px",
+    "pass": true
+  }
+]

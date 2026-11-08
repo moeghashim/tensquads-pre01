@@ -1,0 +1,1388 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node@24/24.21.0/bin/node",
+      "/Users/moeghashim/.no-mistakes/worktrees/7fcac8a8339b/01M6XSJJKXC5697CFJ8TX5440W/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      ".local-test.config.ts",
+      "--project",
+      "app",
+      "--workers",
+      "2",
+      "e2e/home.spec.ts",
+      "e2e/signup.spec.ts",
+      "e2e/home-v2.spec.ts"
+    ],
+    "configFile": "/Users/moeghashim/.no-mistakes/worktrees/7fcac8a8339b/01M6XSJJKXC5697CFJ8TX5440W/.local-test.config.ts",
+    "rootDir": "/Users/moeghashim/.no-mistakes/worktrees/7fcac8a8339b/01M6XSJJKXC5697CFJ8TX5440W/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "app",
+        "name": "app",
+        "testDir": "/Users/moeghashim/.no-mistakes/worktrees/7fcac8a8339b/01M6XSJJKXC5697CFJ8TX5440W/e2e",
+        "testIgnore": [
+          "/rules-fence\\.spec\\.ts/",
+          "/agent-fence\\.spec\\.ts/",
+          "/admin-.*\\.spec\\.ts/"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "admin",
+        "name": "admin",
+        "testDir": "/Users/moeghashim/.no-mistakes/worktrees/7fcac8a8339b/01M6XSJJKXC5697CFJ8TX5440W/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/admin-.*\\.spec\\.ts/"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "rules-fence",
+        "name": "rules-fence",
+        "testDir": "/Users/moeghashim/.no-mistakes/worktrees/7fcac8a8339b/01M6XSJJKXC5697CFJ8TX5440W/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/rules-fence\\.spec\\.ts|agent-fence\\.spec\\.ts/"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "name": "app",
+        "testDir": "/Users/moeghashim/.no-mistakes/worktrees/7fcac8a8339b/01M6XSJJKXC5697CFJ8TX5440W/e2e",
+        "snapshotDir": "/Users/moeghashim/.no-mistakes/worktrees/7fcac8a8339b/01M6XSJJKXC5697CFJ8TX5440W/e2e",
+        "testIgnore": [
+          {},
+          {},
+          {}
+        ],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://localhost:3000",
+          "deviceScaleFactor": 1,
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "on",
+          "launchOptions": {
+            "args": [
+              "--font-render-hinting=none",
+              "--disable-font-subpixel-positioning",
+              "--force-color-profile=srgb"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "app"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/targeted-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "home-v2.spec.ts",
+      "file": "home-v2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "10squads.com gets the current homepage and tensquads.moe-678.workers.dev gets home-v2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3902,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:47:50.711Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-v2-10squads-com-gets--888bd-78-workers-dev-gets-home-v2-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d565de6e565563718a1e-a80e73d3b7e17936d5a7",
+          "file": "home-v2.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "hero cards have opacity 0 on the first frame with motion allowed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7021,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:47:50.694Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-v2-hero-cards-have-op-bcf0c-t-frame-with-motion-allowed-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d565de6e565563718a1e-86e08a060aefe92054f1",
+          "file": "home-v2.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "the reduced-motion path shows the hero cards at once and still approves Pisa's decision",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3199,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:47:54.752Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-v2-the-reduced-motion-1e7ea-ll-approves-Pisa-s-decision-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d565de6e565563718a1e-e85ef2ae61845dff2ea9",
+          "file": "home-v2.spec.ts",
+          "line": 81,
+          "column": 1
+        },
+        {
+          "title": "prompt interactions preserve animation progress with no-preference motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 16579,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:47:57.851Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-v2-prompt-interaction-86e54-s-with-no-preference-motion-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d565de6e565563718a1e-21a72ded86d30c2cc434",
+          "file": "home-v2.spec.ts",
+          "line": 98,
+          "column": 2
+        },
+        {
+          "title": "prompt interactions preserve animation progress with reduce motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13649,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:47:57.959Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-v2-prompt-interaction-83790-progress-with-reduce-motion-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d565de6e565563718a1e-0e9dc308120f8dbda1bf",
+          "file": "home-v2.spec.ts",
+          "line": 98,
+          "column": 2
+        },
+        {
+          "title": "with JavaScript off every hero card shows",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 501,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:11.618Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-v2-with-JavaScript-off-every-hero-card-shows-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d565de6e565563718a1e-e1242ea19cdcf427342f",
+          "file": "home-v2.spec.ts",
+          "line": 130,
+          "column": 1
+        },
+        {
+          "title": "no text or attribute on home-v2 contains master in any case",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:12.128Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-v2-no-text-or-attribu-cdb64-contains-master-in-any-case-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d565de6e565563718a1e-1b2a8e14d9e41a97376d",
+          "file": "home-v2.spec.ts",
+          "line": 145,
+          "column": 1
+        },
+        {
+          "title": "home-v2 toggle, example chips, squadmate tooltips, and sign-up / sign-in routes work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5376,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:13.485Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-v2-home-v2-toggle-exa-8d0e8-sign-up-sign-in-routes-work-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d565de6e565563718a1e-879612b4f03c8f444014",
+          "file": "home-v2.spec.ts",
+          "line": 166,
+          "column": 1
+        },
+        {
+          "title": "home-v2 controls are keyboard-reachable with the 2px #0169cc focus ring",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1655,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:14.441Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-v2-home-v2-controls-a-3f2c2-h-the-2px-0169cc-focus-ring-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d565de6e565563718a1e-ebcc3457212c0018ff64",
+          "file": "home-v2.spec.ts",
+          "line": 212,
+          "column": 1
+        },
+        {
+          "title": "home-v2 at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8593,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:16.105Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-v2-home-v2-at-1440-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d565de6e565563718a1e-81cdcb2119766dfc3d8c",
+          "file": "home-v2.spec.ts",
+          "line": 228,
+          "column": 2
+        },
+        {
+          "title": "home-v2 at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8162,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:18.870Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-v2-home-v2-at-390-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d565de6e565563718a1e-e4d06f529da8be391952",
+          "file": "home-v2.spec.ts",
+          "line": 228,
+          "column": 2
+        }
+      ]
+    },
+    {
+      "title": "home.spec.ts",
+      "file": "home.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "typed homepage prompt text stays when the business kind changes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1545,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:24.712Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-typed-homepage-prompt-450de-n-the-business-kind-changes-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-bfd29678a7c5048bf877",
+          "file": "home.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "the homepage toggle changes the prompt and fills an example",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:26.267Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-the-homepage-toggle-c-99091-prompt-and-fills-an-example-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-73aacafaeac12bf653bc",
+          "file": "home.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "homepage calls to action follow the design routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5771,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:27.050Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-homepage-calls-to-action-follow-the-design-routes-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-048d169db8b865b9231a",
+          "file": "home.spec.ts",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "homepage anchors scroll to the named sections",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2880,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:27.748Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-homepage-anchors-scroll-to-the-named-sections-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-e4140d2638ba7e7a673a",
+          "file": "home.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "homepage controls have labels and the focus ring",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1297,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:30.638Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-homepage-controls-have-labels-and-the-focus-ring-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-cdc8b6475fe537cecdc7",
+          "file": "home.spec.ts",
+          "line": 68,
+          "column": 1
+        },
+        {
+          "title": "squad drawings stay 72 by 72 at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1082,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:31.948Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-squad-drawings-stay-72-by-72-at-1440-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-0a0f17862a174a7465eb",
+          "file": "home.spec.ts",
+          "line": 80,
+          "column": 2
+        },
+        {
+          "title": "homepage at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2094,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:32.831Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-homepage-at-1440-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-9cf7a309e57e7551a5e3",
+          "file": "home.spec.ts",
+          "line": 96,
+          "column": 2
+        },
+        {
+          "title": "squad drawings stay 72 by 72 at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1119,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:33.040Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-squad-drawings-stay-72-by-72-at-390-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-3fcdb01db1b8e97b6045",
+          "file": "home.spec.ts",
+          "line": 80,
+          "column": 2
+        },
+        {
+          "title": "homepage at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1471,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:34.169Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/home-homepage-at-390-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-b3dc6fd4b49bf11f6569",
+          "file": "home.spec.ts",
+          "line": 96,
+          "column": 2
+        }
+      ]
+    },
+    {
+      "title": "signup.spec.ts",
+      "file": "signup.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "details keeps every selected channel and platform on",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1790,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:34.938Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/signup-details-keeps-every-selected-channel-and-platform-on-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-948c73115c720fc9d2c6",
+          "file": "signup.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "sign-up starts at business type and pre-selects the design squads",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:35.655Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/signup-sign-up-starts-at-b-d0516-e-selects-the-design-squads-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-61523d9b4fe245ff3d2c",
+          "file": "signup.spec.ts",
+          "line": 39,
+          "column": 1
+        },
+        {
+          "title": "an existing business shows its fields and four starter squads",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1614,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:36.738Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/signup-an-existing-busines-55eb4-lds-and-four-starter-squads-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-6813cfcda28b86eedae7",
+          "file": "signup.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "zero squads do not open the account form",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1742,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:37.115Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/signup-zero-squads-do-not-open-the-account-form-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-71a1dfb532d30640be61",
+          "file": "signup.spec.ts",
+          "line": 90,
+          "column": 1
+        },
+        {
+          "title": "the account step reuses the sign-in fields and blocks empty input",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1746,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:38.360Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/signup-the-account-step-re-e667a-elds-and-blocks-empty-input-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-7ed772061d12894ccef6",
+          "file": "signup.spec.ts",
+          "line": 103,
+          "column": 1
+        },
+        {
+          "title": "sign-up controls have labels",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1119,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:38.866Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/signup-sign-up-controls-have-labels-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-9d3342ad81cc2464771e",
+          "file": "signup.spec.ts",
+          "line": 120,
+          "column": 1
+        },
+        {
+          "title": "sign-up at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1008,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:39.992Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/signup-sign-up-at-1440-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-19f3c67d13bb067f888e",
+          "file": "signup.spec.ts",
+          "line": 128,
+          "column": 2
+        },
+        {
+          "title": "sign-up at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1050,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:40.116Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/signup-sign-up-at-390-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-bc9b129934a64819d514",
+          "file": "signup.spec.ts",
+          "line": 128,
+          "column": 2
+        },
+        {
+          "title": "sign-up squads at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1712,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:41.010Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/signup-sign-up-squads-at-1440-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-b9343d34083f9765ebe4",
+          "file": "signup.spec.ts",
+          "line": 141,
+          "column": 2
+        },
+        {
+          "title": "sign-up squads at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "app",
+              "projectName": "app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1653,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T14:48:41.175Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/moeghashim/.no-mistakes/evidence/01M6XSJJKXC5697CFJ8TX5440W/playwright/signup-sign-up-squads-at-390-app/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-e9bd22fbadceb950762b",
+          "file": "signup.spec.ts",
+          "line": 141,
+          "column": 2
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-08T14:47:49.984Z",
+    "duration": 52937.706,
+    "expected": 30,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

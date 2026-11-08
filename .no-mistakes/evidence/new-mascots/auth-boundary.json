@@ -1,0 +1,30 @@
+[
+  {
+    "requested": "/agents",
+    "actual": "/signin",
+    "heading": [
+      "Sign in to tensquads"
+    ]
+  },
+  {
+    "requested": "/chat",
+    "actual": "/signin",
+    "heading": [
+      "Sign in to tensquads"
+    ]
+  },
+  {
+    "requested": "/admin/images",
+    "actual": "/signin",
+    "heading": [
+      "Sign in to tensquads"
+    ]
+  },
+  {
+    "requested": "Create workspace",
+    "actual": "/signup",
+    "alerts": [],
+    "accountFormVisible": true,
+    "note": "No Clerk keys configured; submission remains on account form."
+  }
+]
