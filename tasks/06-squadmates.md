@@ -32,9 +32,11 @@ The name belongs to the agent image, not to the account. No customer can change 
 | analytics | Delphi | Delphi, Greece | Analytics |
 | hr | Sydney | Sydney, Australia | People |
 
-Decision 33 fixes the name for the `hr` image. The original reference sheet had no People character. The package adds Sydney with a name badge on the body as its accessory. Report this drawing addition in the pull request for Moe.
+Decision 33 fixes the name for the `hr` image. The original reference sheet had no People character. Task 06 added Sydney and required the pull request to report that addition for Moe. The current drawing rules and source follow [decision 33](../docs/PLAN.md#decisions).
 
 ## Steps, in order
+
+The geometry, colour and unchanged-review-page checks below apply to the original package migration. Later mascot changes follow [decision 33](../docs/PLAN.md#decisions).
 
 1. Add this task file in the first commit.
 2. Make `packages/squadmates`, a pure TypeScript package with no runtime dependency. Move the drawing from `apps/landing/review-src/squadmates.mjs` into it, with the same geometry and colours. Export the table above, the nine Agent loop states, and one function that returns the SVG markup for an image id, a state and a size. An unknown image id is an error. A unit test checks that every agent image in the seed has a squadmate.
