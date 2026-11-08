@@ -156,11 +156,20 @@ try {
 	);
 	flowCard = `<h2>How the agents work</h2><a class="card" href="/review/agent-flow">Agent flow<span>How Petra, Machu and Angkor work together, step by step, at commit ${sha}</span></a>`;
 } catch {}
+// The design system page is a full document from docs/design-system. It is served at /design.
+// Its source is github.com/moeghashim/tensquads-design-system, which holds the mascot files.
+let designSystemCard = "";
+try {
+	const designSystem = git("show", `${ref}:docs/design-system/index.html`);
+	mkdirSync(join(here, "public/design"), { recursive: true });
+	writeFileSync(join(here, "public/design/index.html"), designSystem);
+	designSystemCard = `<h2>Design system</h2><a class="card" href="/design">Design system<span>The ten squad mascots and the Agent-UI tokens, at commit ${sha}</span></a>`;
+} catch {}
 writeFileSync(
 	join(out, "index.html"),
 	page(
 		"tensquads review",
-		`<h1>tensquads review</h1><p class="note">For team review. Build plan at commit ${sha}. Design canvas version ${manifest.version}.</p>${homeCard}${flowCard}<h2>Build plan</h2><a class="card" href="/review/plan">Build plan<span>Decisions, architecture, phases, the proof of concept, and the build status of each part</span></a><h2>Squadmates</h2><a class="card" href="/review/characters">Squadmates<span>Proposal: a name and a character for the master and each agent</span></a><h2>Design</h2><a class="card" href="/review/design/">Design<span>${canvas.order.length} screens from the design canvas, with thumbnails</span></a><h2 id="open-questions">Open questions</h2><p class="note">Not decided yet. Each has a recommended answer for the team to discuss.</p>${QUESTIONS_CSS}${questionsHtml()}`,
+		`<h1>tensquads review</h1><p class="note">For team review. Build plan at commit ${sha}. Design canvas version ${manifest.version}.</p>${homeCard}${flowCard}${designSystemCard}<h2>Build plan</h2><a class="card" href="/review/plan">Build plan<span>Decisions, architecture, phases, the proof of concept, and the build status of each part</span></a><h2>Squadmates</h2><a class="card" href="/review/characters">Squadmates<span>Proposal: a name and a character for the master and each agent</span></a><h2>Design</h2><a class="card" href="/review/design/">Design<span>${canvas.order.length} screens from the design canvas, with thumbnails</span></a><h2 id="open-questions">Open questions</h2><p class="note">Not decided yet. Each has a recommended answer for the team to discuss.</p>${QUESTIONS_CSS}${questionsHtml()}`,
 	),
 );
 console.log("built", canvas.order.length, "design files from", sha, "manifest", manifest.version);

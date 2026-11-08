@@ -52,7 +52,7 @@ const HEADERS = {
 	"x-content-type-options": "nosniff",
 };
 
-const REVIEW_PATHS = { "/review": "/review/index.html", "/review/": "/review/index.html", "/review/plan": "/review/plan.html", "/review/characters": "/review/characters.html", "/review/home": "/review/home.html", "/review/agent-flow": "/review/agent-flow.html", "/review/design": "/review/design/index.html", "/review/design/": "/review/design/index.html" };
+const REVIEW_PATHS = { "/review": "/review/index.html", "/review/": "/review/index.html", "/review/plan": "/review/plan.html", "/review/characters": "/review/characters.html", "/review/home": "/review/home.html", "/review/agent-flow": "/review/agent-flow.html", "/review/design": "/review/design/index.html", "/review/design/": "/review/design/index.html", "/design": "/design/index.html", "/design/": "/design/index.html" };
 
 // The team review pages. Search engines skip them. The design files need script,
 // so these pages do not use the strict policy of the holding page.
@@ -73,7 +73,8 @@ export default {
 		if (url.hostname === "www.10squads.com") {
 			return Response.redirect(`https://10squads.com${url.pathname}`, 301);
 		}
-		if (url.pathname === "/review" || url.pathname.startsWith("/review/")) {
+		// /design is the design system page. It uses the same headers as the review pages.
+		if (url.pathname === "/review" || url.pathname.startsWith("/review/") || url.pathname === "/design" || url.pathname === "/design/") {
 			return review(request, env, url);
 		}
 		if (request.method !== "GET" && request.method !== "HEAD") {
