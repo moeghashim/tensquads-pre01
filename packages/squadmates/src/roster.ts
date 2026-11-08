@@ -142,7 +142,7 @@ export const SQUADMATES = [
 		prop: "monocle",
 		line: "Writes the reports and the weekly digest.",
 	},
-	// People uses the design tint #def5ee, the same tint as Support, so the body colour matches.
+	// People keeps the design tint shared with Support. Mascot palettes live in mascots.ts.
 	{
 		id: "hr",
 		name: "Sydney",

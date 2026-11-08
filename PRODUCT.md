@@ -32,7 +32,7 @@ Decision 33 gives each agent one character name. The drawings in `packages/squad
 
 ## Brand Commitments
 
-The product name is tensquads. The token list in `docs/BRIEF.md` is the system for every screen. Screen 1 may add a page-local token only when the new design uses it. The squadmate drawings are fixed: one round body, one role accessory, eyes that show the agent state.
+The product name is tensquads. The token list in `docs/BRIEF.md` is the system for every screen. Screen 1 may add a page-local token only when the new design uses it. The squadmate drawings follow [decision 33](docs/PLAN.md#decisions).
 
 ## Evidence on Hand
 
