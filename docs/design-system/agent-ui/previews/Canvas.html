@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canvas · Agent-UI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="../components/bundle.js"></script>
+</head>
+<body>
+<!-- @dsCard group="Canvas" height=320 subtitle="Ground, dot grid, connectors between ports" -->
+<style>
+  html, body { margin: 0; background: var(--canvas); }
+  .stage { font-family: var(--font-sans); padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .stage--canvas { background-image: radial-gradient(var(--dot-grid) 1px, transparent 1px); background-size: 20px 20px; }
+  .lbl { font: 500 11px/16px var(--font-sans); color: var(--text-tertiary); margin-bottom: 8px; letter-spacing: .3px; text-transform: uppercase; }
+  .wrap{position:relative;width:640px;height:280px;border-radius:var(--radius-2xl);overflow:hidden}
+</style>
+<div class="aui stage" id="stage"><div class="aui-canvas aui-canvas--dots wrap" id="cv"><svg width="640" height="280" style="position:absolute;inset:0" id="edges"></svg></div></div>
+<script>
+(function(){ var U = window.AgentUI; var S = document.getElementById('stage'); 
+  var cv = document.getElementById('cv'), svg = document.getElementById('edges');
+  function place(node, x, y){ node.style.position='absolute'; node.style.left=x+'px'; node.style.top=y+'px'; cv.appendChild(node); return node; }
+  var a = place(U.Node({kind:'start', title:'Start'}), 24, 116);
+  var b = place(U.Node({kind:'shield', title:'Guardrails', branches:['Pass','Fail']}), 160, 84);
+  var c = place(U.Node({kind:'agent', title:'Classifier', meta:'Agent'}), 340, 40);
+  var d = place(U.Node({kind:'end', title:'End'}), 340, 190);
+  var e = place(U.Node({kind:'agent', title:'Fridge', meta:'Agent', selected:true}), 500, 40);
+  function port(n, side, row){ var r = n.getBoundingClientRect(), p = cv.getBoundingClientRect(); var h = row ? row.getBoundingClientRect() : r; return {x: (side==='out'? r.right : r.left) - p.left, y: h.top + h.height/2 - p.top}; }
+  function edge(p, q, sel){ var path = document.createElementNS('http://www.w3.org/2000/svg','path'); path.setAttribute('class','aui-edge'); if (sel) path.setAttribute('data-selected','true'); path.setAttribute('d', U.edgePath(p.x,p.y,q.x,q.y)); svg.appendChild(path); }
+  var rows = b.querySelectorAll('.aui-branch');
+  edge(port(a,'out'), port(b,'in'));
+  edge(port(b,'out',rows[0]), port(c,'in'));
+  edge(port(b,'out',rows[1]), port(d,'in'));
+  edge(port(c,'out'), port(e,'in'), true);
+ })();
+</script>
+
+</body>
+</html>

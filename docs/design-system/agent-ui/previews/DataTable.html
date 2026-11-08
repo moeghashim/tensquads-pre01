@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DataTable · Agent-UI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="../components/bundle.js"></script>
+</head>
+<body>
+<!-- @dsCard group="Data display" height=230 subtitle="Recent runs with verdict badges" -->
+<style>
+  html, body { margin: 0; background: var(--canvas); }
+  .stage { font-family: var(--font-sans); padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .stage--canvas { background-image: radial-gradient(var(--dot-grid) 1px, transparent 1px); background-size: 20px 20px; }
+  .lbl { font: 500 11px/16px var(--font-sans); color: var(--text-tertiary); margin-bottom: 8px; letter-spacing: .3px; text-transform: uppercase; }
+  .stage{display:block;max-width:760px}
+</style>
+<div class="aui stage" id="stage"></div>
+<script>
+(function(){ var U = window.AgentUI; var S = document.getElementById('stage'); 
+  var badge = function(v){ var b = U.Badge(v==null?'Ungraded':v?'Pass':'Fail', v==null?undefined:v?'success':'danger'); if (v!=null) b.insertBefore(U.icon(v?'check':'close',12), b.firstChild); return b; };
+  var rows = [['Oct 17, 8:22 AM','what recipes can I make with eggs',5,'2.90 s','1,031',true],['Oct 17, 8:19 AM','where is my order',4,'1.72 s','642',true],['Oct 16, 6:03 PM','is the milk still good',5,'2.41 s','903',false],['Oct 16, 5:48 PM','hi',3,'1.10 s','288',null]].map(function(r){ return {when:r[0], input:r[1], steps:r[2], latency:r[3], tokens:r[4], verdict:badge(r[5])}; });
+  S.appendChild(U.DataTable({columns:[{key:'when',label:'When',cls:'aui-table__muted'},{key:'input',label:'Input',cls:'aui-table__trunc'},{key:'steps',label:'Steps',num:true},{key:'latency',label:'Latency',num:true},{key:'tokens',label:'Tokens',num:true},{key:'verdict',label:'Verdict'}], rows: rows, onRow:function(){}}));
+ })();
+</script>
+
+</body>
+</html>

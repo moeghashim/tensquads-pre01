@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Header · Agent-UI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="../components/bundle.js"></script>
+</head>
+<body>
+<!-- @dsCard group="Chrome" height=120 subtitle="Builder header: back, title, Draft badge, mode toggle, actions" -->
+<style>
+  html, body { margin: 0; background: var(--canvas); }
+  .stage { font-family: var(--font-sans); padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .stage--canvas { background-image: radial-gradient(var(--dot-grid) 1px, transparent 1px); background-size: 20px 20px; }
+  .lbl { font: 500 11px/16px var(--font-sans); color: var(--text-tertiary); margin-bottom: 8px; letter-spacing: .3px; text-transform: uppercase; }
+  .hdr{width:900px}
+</style>
+<div class="aui stage" id="stage"><div class="aui-header hdr" id="h"></div></div>
+<script>
+(function(){ var U = window.AgentUI; var S = document.getElementById('stage'); 
+  var h = document.getElementById('h');
+  h.appendChild(U.Button({icon:'back', variant:'ghost', iconOnly:true, pill:true, ariaLabel:'Back'}));
+  var t = document.createElement('div'); t.className='aui-header__title'; t.textContent='agent-1.1-fridge'; h.appendChild(t);
+  var d = U.Badge('Draft'); d.appendChild(U.icon('updown', 12)); h.appendChild(d);
+  var sp = document.createElement('div'); sp.className='aui-header__spacer'; h.appendChild(sp);
+  h.appendChild(U.SegmentedControl([{icon:'pencil', label:'Edit mode', pressed:true},{icon:'play', label:'Preview mode'}]));
+  var sp2 = document.createElement('div'); sp2.className='aui-header__spacer'; h.appendChild(sp2);
+  h.appendChild(U.Button({icon:'more', variant:'ghost', iconOnly:true, pill:true, ariaLabel:'Workflow actions'}));
+  h.appendChild(U.Button({label:'Code', icon:'code', variant:'solid', pill:true}));
+ })();
+</script>
+
+</body>
+</html>

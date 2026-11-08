@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chat · Agent-UI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="../components/bundle.js"></script>
+</head>
+<body>
+<!-- @dsCard group="Chrome" height=560 width=1200 subtitle="Play mode: user pills, one row per step, the reply under the agent, composer with send/stop" -->
+<style>
+  html, body { margin: 0; background: var(--canvas); }
+  .stage { font-family: var(--font-sans); padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; background-image: radial-gradient(var(--dot-grid) 1px, transparent 1px); background-size: 20px 20px; min-height: 520px; box-sizing: border-box; }
+  .lbl { font: 500 11px/16px var(--font-sans); color: var(--text-tertiary); margin-bottom: 8px; letter-spacing: .3px; text-transform: uppercase; }
+  .panel { width: 480px; height: 500px; display: flex; flex-direction: column; padding: 0; }
+  .panel--empty { width: 360px; }
+</style>
+<div class="aui stage" id="stage"></div>
+<script>
+(function(){ var U = window.AgentUI; var S = document.getElementById('stage');
+  function md(html){ var d=document.createElement('div'); d.innerHTML=html; return d; }
+  var col1 = document.createElement('div'); var l1 = document.createElement('div'); l1.className='lbl'; l1.textContent='Mid-run'; col1.appendChild(l1);
+  var p1 = document.createElement('div'); p1.className='aui-panel panel';
+  var chat = U.Chat({ onNew: function(){ chat.clear(); }, messages: [
+    { role:'user', text:'What can I cook with eggs, spinach and feta?' },
+    { role:'step', name:'Start', kind:'start' },
+    { role:'step', name:'Classifier', kind:'agent', responseId:'resp_68f1c2a9e0b4', status:'routed to Recipe' },
+    { role:'step', name:'Recipe', kind:'agent', responseId:'resp_68f1c2b17c20', reply: md('<p>Two quick options:</p><ul><li><strong>Spinach and feta omelette</strong> — 3 eggs, a handful of wilted spinach, 30 g crumbled feta. 6 minutes.</li><li><strong>Baked eggs</strong> — spinach and feta in a ramekin, crack two eggs on top, 12 minutes at 200 °C.</li></ul><p>Want the full steps for either?</p>') },
+    { role:'user', text:'The omelette please' },
+    { role:'step', name:'Recipe', kind:'agent', state:'running' }
+  ], busy: true });
+  p1.appendChild(chat); col1.appendChild(p1); S.appendChild(col1);
+  var col2 = document.createElement('div'); var l2 = document.createElement('div'); l2.className='lbl'; l2.textContent='Empty'; col2.appendChild(l2);
+  var p2 = document.createElement('div'); p2.className='aui-panel panel panel--empty';
+  p2.appendChild(U.Chat({ onNew: function(){} })); col2.appendChild(p2); S.appendChild(col2);
+ })();
+</script>
+
+</body>
+</html>

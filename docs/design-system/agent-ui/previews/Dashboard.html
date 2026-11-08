@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · Agent-UI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="../components/bundle.js"></script>
+</head>
+<body>
+<!-- @dsCard group="Pages" height=900 width=1200 page subtitle="Monitor page assembled from the data-display components" -->
+<style>
+  html, body { margin: 0; background: var(--canvas); }
+  .stage { font-family: var(--font-sans); padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .stage--canvas { background-image: radial-gradient(var(--dot-grid) 1px, transparent 1px); background-size: 20px 20px; }
+  .lbl { font: 500 11px/16px var(--font-sans); color: var(--text-tertiary); margin-bottom: 8px; letter-spacing: .3px; text-transform: uppercase; }
+  .stage{display:block;padding:0}.aui-page{padding:24px 24px 32px}
+</style>
+<div class="aui stage" id="stage"></div>
+<script>
+(function(){ var U = window.AgentUI; var S = document.getElementById('stage'); var days=['Oct 11','Oct 12','Oct 13','Oct 14','Oct 15','Oct 16','Oct 17'].map(function(l,i){ var p=[3,5,4,7,6,9,8][i], f=[1,0,2,1,0,1,2][i], u=[0,1,0,2,1,0,1][i]; return {label:l, segments:[{key:'pass',value:p},{key:'fail',value:f},{key:'ungraded',value:u}]}; }); var keys=[{key:'pass',label:'Pass',cls:'aui-chart__bar--pass'},{key:'fail',label:'Fail',cls:'aui-chart__bar--fail'},{key:'ungraded',label:'Ungraded',cls:'aui-chart__bar--muted'}];
+  var page = document.createElement('div'); page.className = 'aui-page';
+  page.appendChild(U.PageHeader({title:'Monitor', sub:'agent-1.1-fridge · last 7 days', actions:[U.SegmentedText([{value:'7',label:'7d',pressed:true},{value:'14',label:'14d'},{value:'30',label:'30d'}])]}));
+  var stack = document.createElement('div'); stack.className = 'aui-stack';
+  var tiles = document.createElement('div'); tiles.className = 'aui-grid aui-grid--tiles';
+  tiles.appendChild(U.StatTile({label:'Runs', icon:'play', value:'42', delta:{text:'+31%', good:true}, series:[3,5,4,7,6,9,8]}));
+  tiles.appendChild(U.StatTile({label:'Latency · p50', icon:'clock', value:'2.4', unit:'s', delta:{text:'-12%', good:true}, series:[3.1,2.9,3.0,2.6,2.7,2.4,2.4]}));
+  tiles.appendChild(U.StatTile({label:'Tokens', icon:'tokens', value:'48,210', delta:{text:'+9%', good:false}, series:[5,6,6,7,8,8,9]}));
+  tiles.appendChild(U.StatTile({label:'Pass rate', icon:'check', value:'92', unit:'%', delta:{text:'+4%', good:true}, series:[.8,.9,.85,1,.9,.95,.92]}));
+  stack.appendChild(tiles);
+  var row1 = document.createElement('div'); row1.className = 'aui-grid aui-grid--3-2';
+  row1.appendChild(U.Card({title:'Runs per day', sub:'Graded pass and fail, plus ungraded', legend:[['Pass','var(--green-500)'],['Fail','var(--red-500)'],['Ungraded','var(--alpha-20)']], body: U.BarChart({days: days, keys: keys})}));
+  row1.appendChild(U.Card({title:'Latency by node', sub:'Average span duration across runs', body: U.Bars({rows:[{label:'Classifier', value:1080, display:'1.08 s', kind:'agent'},{label:'Recipe', value:1050, display:'1.05 s', kind:'agent'},{label:'Guardrails', value:500, display:'500 ms', kind:'shield'},{label:'Start', value:121, display:'121 ms', kind:'start'},{label:'If / else', value:120, display:'120 ms', kind:'ifelse'}]})}));
+  stack.appendChild(row1);
+  var row2 = document.createElement('div'); row2.className = 'aui-grid aui-grid--2-3';
+  row2.appendChild(U.Card({title:'Routing', sub:'Where branch nodes sent the run', body: U.Distribution({groups:[{name:'Guardrails', kind:'shield', parts:[{label:'Pass', value:38},{label:'Fail', value:4}]},{name:'If / else', kind:'ifelse', parts:[{label:'Recipes', value:19},{label:'Fridge', value:9},{label:'Store', value:6},{label:'Normal', value:3},{label:'Else', value:1}]}]})}));
+  var badge = function(v){ var b = U.Badge(v==null?'Ungraded':v?'Pass':'Fail', v==null?undefined:v?'success':'danger'); if (v!=null) b.insertBefore(U.icon(v?'check':'close',12), b.firstChild); return b; };
+  var rows = [['Oct 17, 8:22 AM','what recipes can I make with eggs',5,'2.90 s','1,031',true],['Oct 17, 8:19 AM','where is my order',4,'1.72 s','642',true],['Oct 16, 6:03 PM','is the milk still good',5,'2.41 s','903',false],['Oct 16, 5:48 PM','hi',3,'1.10 s','288',null]].map(function(r){ return {when:r[0], input:r[1], steps:r[2], latency:r[3], tokens:r[4], verdict:badge(r[5])}; });
+  var foot = document.createElement('span'); foot.textContent = 'Newest first · opens in Evaluate';
+  row2.appendChild(U.Card({title:'Recent runs', body: U.DataTable({columns:[{key:'when',label:'When',cls:'aui-table__muted'},{key:'input',label:'Input',cls:'aui-table__trunc'},{key:'steps',label:'Steps',num:true},{key:'latency',label:'Latency',num:true},{key:'tokens',label:'Tokens',num:true},{key:'verdict',label:'Verdict'}], rows: rows, onRow:function(){}}), foot: foot}));
+  stack.appendChild(row2);
+  page.appendChild(stack); S.appendChild(page);
+ })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inspector · Agent-UI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="../components/bundle.js"></script>
+</head>
+<body>
+<!-- @dsCard group="Panels" height=620 subtitle="Settings panel for the selected node" -->
+<style>
+  html, body { margin: 0; background: var(--canvas); }
+  .stage { font-family: var(--font-sans); padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .stage--canvas { background-image: radial-gradient(var(--dot-grid) 1px, transparent 1px); background-size: 20px 20px; }
+  .lbl { font: 500 11px/16px var(--font-sans); color: var(--text-tertiary); margin-bottom: 8px; letter-spacing: .3px; text-transform: uppercase; }
+  
+</style>
+<div class="aui stage" id="stage">
+<div class="aui-panel">
+  <div class="aui-panel__head">
+    <div><div class="aui-panel__title">Classifier</div><div class="aui-panel__desc">Call the model with your instructions and tools</div></div>
+    <div class="aui-panel__actions" id="acts"></div>
+  </div>
+  <div class="aui-field"><label class="aui-field__label" for="nm">Name</label><input id="nm" class="aui-input" value="Classifier"></div>
+  <div class="aui-field aui-field--stack">
+    <div class="aui-field__row"><span class="aui-field__label">Instructions</span><span class="aui-panel__actions" id="acts2"></span></div>
+    <textarea class="aui-textarea">You are tasked with classifying the user's message into one of four intent categories: Normal, Store, Recipes, or Fridge. Always return only one of these four words as your answer.</textarea>
+  </div>
+  <div class="aui-field"><span class="aui-field__label">Include chat history</span><span id="sw"></span></div>
+  <div class="aui-field"><span class="aui-field__label">Model</span><button class="aui-field__value" id="mdl">gpt-5-nano</button></div>
+  <div class="aui-field"><span class="aui-field__label">Reasoning effort</span><button class="aui-field__value" id="eff">medium</button></div>
+  <div class="aui-field"><span class="aui-field__label">Tools</span><span id="add"></span></div>
+  <div class="aui-field"><span class="aui-field__label">Output format</span><button class="aui-field__value" id="fmt">JSON</button></div>
+  <div><span id="chip"></span></div>
+  <div class="aui-panel__divider"></div>
+  <div class="aui-field"><button class="aui-btn aui-btn--ghost aui-btn--sm" id="more" style="padding-left:0;color:var(--text)"></button><button class="aui-btn aui-btn--ghost aui-btn--sm is-muted aui-btn--quiet" id="eval" style="padding-right:0"></button></div>
+</div></div>
+<script>
+(function(){ var U = window.AgentUI; var S = document.getElementById('stage'); 
+  var acts = document.getElementById('acts'); acts.appendChild(U.Button({icon:'copy', variant:'ghost', iconOnly:true, size:'sm', ariaLabel:'Duplicate'})); acts.appendChild(U.Button({icon:'trash', variant:'ghost', iconOnly:true, size:'sm', ariaLabel:'Delete'}));
+  var a2 = document.getElementById('acts2'); a2.appendChild(U.Button({icon:'plus', variant:'ghost', iconOnly:true, size:'sm', ariaLabel:'Insert variable'})); a2.appendChild(U.Button({icon:'wand', variant:'ghost', iconOnly:true, size:'sm', ariaLabel:'Improve'}));
+  document.getElementById('sw').appendChild(U.Switch(true));
+  ['mdl','eff','fmt'].forEach(function(id){ document.getElementById(id).appendChild(U.icon('updown', 12)); });
+  document.getElementById('add').appendChild(U.Button({icon:'plus', variant:'ghost', iconOnly:true, size:'sm', ariaLabel:'Add tool'}));
+  document.getElementById('chip').appendChild(U.Chip('response_schema', 'schema'));
+  var m = document.getElementById('more'); m.appendChild(U.icon('chevron', 14)); m.appendChild(document.createTextNode('More'));
+  var ev = document.getElementById('eval'); ev.appendChild(document.createTextNode('Evaluate')); ev.appendChild(U.icon('external', 14));
+ })();
+</script>
+
+</body>
+</html>

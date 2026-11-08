@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WorkflowCard · Agent-UI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="../components/bundle.js"></script>
+</head>
+<body>
+<!-- @dsCard group="Data display" height=300 subtitle="One workflow on the home page: graph thumbnail, status, stats" -->
+<style>
+  html, body { margin: 0; background: var(--canvas); }
+  .stage { font-family: var(--font-sans); padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .stage--canvas { background-image: radial-gradient(var(--dot-grid) 1px, transparent 1px); background-size: 20px 20px; }
+  .lbl { font: 500 11px/16px var(--font-sans); color: var(--text-tertiary); margin-bottom: 8px; letter-spacing: .3px; text-transform: uppercase; }
+  .stage{display:grid;grid-template-columns:repeat(2,320px);gap:16px}
+</style>
+<div class="aui stage" id="stage"></div>
+<script>
+(function(){ var U = window.AgentUI; var S = document.getElementById('stage'); var graph={nodes:[{id:'s',x:60,y:320,kind:'start'},{id:'g',x:200,y:180,kind:'shield'},{id:'c',x:380,y:200,kind:'agent'},{id:'e1',x:200,y:400,kind:'end'},{id:'r',x:600,y:120,kind:'ifelse'},{id:'a1',x:820,y:40,kind:'agent'},{id:'a2',x:820,y:130,kind:'agent'},{id:'a3',x:820,y:220,kind:'agent'},{id:'a4',x:820,y:310,kind:'agent'},{id:'e2',x:600,y:420,kind:'end'}],edges:[{source:'s',target:'g'},{source:'g',target:'c'},{source:'g',target:'e1'},{source:'c',target:'r'},{source:'r',target:'a1'},{source:'r',target:'a2'},{source:'r',target:'a3'},{source:'r',target:'a4'},{source:'r',target:'e2'}]};
+  S.appendChild(U.WorkflowCard({name:'agent-1.1-fridge', status:'live', meta:'10 nodes · 5 agents · edited 2 h ago', graph:graph, stats:[{v:'42',k:'runs · 7d'},{v:'92%',k:'pass rate'},{v:'8 min ago',k:'last run'}], menu:[{label:'Open', icon:'pencil'},{label:'Duplicate', icon:'copy'},{label:'Unpublish', icon:'check'},{sep:true},{label:'Delete', icon:'trash', danger:true}]}));
+  S.appendChild(U.WorkflowCard({name:'support-triage', status:'draft', meta:'4 nodes · 1 agent · edited yesterday', graph:{nodes:[{id:'s',x:0,y:100,kind:'start'},{id:'c',x:180,y:60,kind:'classify'},{id:'a',x:360,y:0,kind:'agent'},{id:'e',x:360,y:140,kind:'end'}],edges:[{source:'s',target:'c'},{source:'c',target:'a'},{source:'c',target:'e'}]}, stats:[{v:'0',k:'runs · 7d'},{v:'—',k:'pass rate'},{v:'—',k:'last run'}], menu:[{label:'Open', icon:'pencil'},{label:'Duplicate', icon:'copy'},{label:'Publish', icon:'check'},{sep:true},{label:'Delete', icon:'trash', danger:true}]}));
+ })();
+</script>
+
+</body>
+</html>

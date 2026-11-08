@@ -156,14 +156,19 @@ try {
 	);
 	flowCard = `<h2>How the agents work</h2><a class="card" href="/review/agent-flow">Agent flow<span>How Petra, Machu and Angkor work together, step by step, at commit ${sha}</span></a>`;
 } catch {}
-// The design system page is a full document from docs/design-system. It is served at /design.
-// Its source is github.com/moeghashim/tensquads-design-system, which holds the mascot files.
+// The design system page is a copy of github.com/moeghashim/tensquads-design-system, served at /design/.
+// docs/design-system holds the page, the Agent-UI tokens and bundle, and one page per component preview.
+// The mascot image files stay in that repository. The page links to them there.
 let designSystemCard = "";
 try {
-	const designSystem = git("show", `${ref}:docs/design-system/index.html`);
-	mkdirSync(join(here, "public/design"), { recursive: true });
-	writeFileSync(join(here, "public/design/index.html"), designSystem);
-	designSystemCard = `<h2>Design system</h2><a class="card" href="/design">Design system<span>The ten squad mascots and the Agent-UI tokens, at commit ${sha}</span></a>`;
+	const files = git("ls-tree", "-r", "--name-only", ref, "docs/design-system").split("\n").filter(Boolean);
+	if (!files.includes("docs/design-system/index.html")) throw new Error("no design system page");
+	for (const file of files) {
+		const target = join(here, "public/design", file.slice("docs/design-system/".length));
+		mkdirSync(dirname(target), { recursive: true });
+		writeFileSync(target, execFileSync("git", ["show", `${ref}:${file}`], { cwd: root, maxBuffer: 1 << 26 }));
+	}
+	designSystemCard = `<h2>Design system</h2><a class="card" href="/design/">Design system<span>The ten squad mascots and Agent-UI: principles, components and tokens, at commit ${sha}</span></a>`;
 } catch {}
 writeFileSync(
 	join(out, "index.html"),

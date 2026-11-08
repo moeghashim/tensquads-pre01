@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Button · Agent-UI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="../components/bundle.js"></script>
+</head>
+<body>
+<!-- @dsCard group="Actions" height=240 subtitle="Solid, soft, outline, ghost, danger · pill · icon" -->
+<style>
+  html, body { margin: 0; background: var(--canvas); }
+  .stage { font-family: var(--font-sans); padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .stage--canvas { background-image: radial-gradient(var(--dot-grid) 1px, transparent 1px); background-size: 20px 20px; }
+  .lbl { font: 500 11px/16px var(--font-sans); color: var(--text-tertiary); margin-bottom: 8px; letter-spacing: .3px; text-transform: uppercase; }
+  
+</style>
+<div class="aui stage" id="stage"></div>
+<script>
+(function(){ var U = window.AgentUI; var S = document.getElementById('stage'); 
+  function row(label, items){ var w=document.createElement('div'); w.style.width='100%'; w.innerHTML='<div class="lbl">'+label+'</div>'; var r=document.createElement('div'); r.style.cssText='display:flex;gap:12px;flex-wrap:wrap;align-items:center'; items.forEach(function(i){ r.appendChild(i); }); w.appendChild(r); S.appendChild(w); }
+  row('Variants (md, pill)', [U.Button({label:'Code', icon:'code', variant:'solid', pill:true}), U.Button({label:'Publish', variant:'soft', pill:true}), U.Button({label:'Preview', icon:'play', variant:'outline', pill:true}), U.Button({label:'Cancel', variant:'ghost', pill:true}), U.Button({label:'Delete', icon:'trash', variant:'danger', pill:true}), U.Button({label:'Disabled', variant:'solid', pill:true, disabled:true})]);
+  row('Sizes (radius-lg)', [U.Button({label:'Small', variant:'soft', size:'sm'}), U.Button({label:'Medium', variant:'soft'}), U.Button({label:'Large', variant:'soft', size:'lg'})]);
+  row('Icon buttons', [U.Button({icon:'more', variant:'ghost', iconOnly:true, pill:true, ariaLabel:'Actions'}), U.Button({icon:'pencil', variant:'soft', iconOnly:true, pill:true, ariaLabel:'Edit'}), U.Button({icon:'copy', variant:'ghost', iconOnly:true, ariaLabel:'Duplicate'}), U.Button({icon:'trash', variant:'ghost', iconOnly:true, ariaLabel:'Delete'})]);
+ })();
+</script>
+
+</body>
+</html>

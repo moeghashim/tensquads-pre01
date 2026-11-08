@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StatTile · Agent-UI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="../components/bundle.js"></script>
+</head>
+<body>
+<!-- @dsCard group="Data display" height=190 subtitle="Headline number with sparkline and delta" -->
+<style>
+  html, body { margin: 0; background: var(--canvas); }
+  .stage { font-family: var(--font-sans); padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .stage--canvas { background-image: radial-gradient(var(--dot-grid) 1px, transparent 1px); background-size: 20px 20px; }
+  .lbl { font: 500 11px/16px var(--font-sans); color: var(--text-tertiary); margin-bottom: 8px; letter-spacing: .3px; text-transform: uppercase; }
+  .stage{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-width:1040px}
+</style>
+<div class="aui stage" id="stage"></div>
+<script>
+(function(){ var U = window.AgentUI; var S = document.getElementById('stage'); 
+  S.appendChild(U.StatTile({label:'Runs', icon:'play', value:'42', delta:{text:'+31%', good:true}, series:[3,5,4,7,6,9,8]}));
+  S.appendChild(U.StatTile({label:'Latency · p50', icon:'clock', value:'2.4', unit:'s', delta:{text:'-12%', good:true}, series:[3.1,2.9,3.0,2.6,2.7,2.4,2.4]}));
+  S.appendChild(U.StatTile({label:'Tokens', icon:'tokens', value:'48,210', delta:{text:'+9%', good:false}, series:[5,6,6,7,8,8,9]}));
+  S.appendChild(U.StatTile({label:'Pass rate', icon:'check', value:'92', unit:'%', delta:null, foot:'34 of 37 graded', series:[.8,.9,.85,1,.9,.95,.92]}));
+ })();
+</script>
+
+</body>
+</html>
