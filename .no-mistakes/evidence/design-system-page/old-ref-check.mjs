@@ -1,0 +1,18 @@
+import {createRequire} from 'node:module';
+import {writeFileSync,readdirSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const {chromium,expect}=createRequire(process.cwd()+'/package.json')('@playwright/test');
+const dir='/Users/moeghashim/.no-mistakes/evidence/01M6X9NKGDG0KASFKX80SGMY01';
+const browser=await chromium.launch();
+const page=await browser.newPage({viewport:{width:1440,height:900}});
+await page.goto('http://localhost:8791/review/');
+await expect(page.getByRole('heading',{name:'tensquads review',exact:true})).toBeVisible();
+await expect(page.getByRole('link',{name:/Design system/})).toHaveCount(0);
+const response=await page.request.get('http://localhost:8791/design/');
+assert.equal(response.status(),404);
+await page.screenshot({path:dir+'/older-ref-review.png'});
+const result={name:'Building a ref without the design system omits its card and returns 404 instead of stale content',result:'pass',live:true,ref:'93f7dc829274be3b78317f880f8aa3a0b3778f73',designStatus:response.status(),designCardCount:0};
+writeFileSync(dir+'/old-ref-results.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));
+const shots=readdirSync(dir).filter(s=>s.endsWith('.png'));
+writeFileSync(dir+'/gallery.html','<!doctype html><meta charset="utf-8"><title>Live design system evidence</title><style>body{font:16px system-ui;margin:24px}img{max-width:100%;border:1px solid #ddd}section{margin:32px 0}</style><h1>Design system: live Chromium evidence</h1>'+shots.map(s=>'<section><h2>'+s+'</h2><a href="'+s+'"><img loading="lazy" src="'+s+'"></a></section>').join(''));
+await browser.close();

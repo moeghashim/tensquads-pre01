@@ -1,0 +1,8 @@
+{
+  "name": "Building a ref without the design system omits its card and returns 404 instead of stale content",
+  "result": "pass",
+  "live": true,
+  "ref": "93f7dc829274be3b78317f880f8aa3a0b3778f73",
+  "designStatus": 404,
+  "designCardCount": 0
+}

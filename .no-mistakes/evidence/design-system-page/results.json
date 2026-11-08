@@ -1,0 +1,144 @@
+{
+  "results": [
+    {
+      "name": "Review visitor opens the design system and direct routes serve the page with review headers",
+      "result": "pass",
+      "live": true,
+      "detail": {
+        "redirect": "http://localhost:8791/design/",
+        "status": 200,
+        "robots": "noindex, nofollow",
+        "mascots": [
+          "Petra",
+          "Pisa",
+          "Kyoto",
+          "Rio",
+          "Zurich",
+          "Giza",
+          "Machu",
+          "Angkor",
+          "Delphi",
+          "Sydney"
+        ]
+      }
+    },
+    {
+      "name": "Reader scrolls all component previews and opens every standalone example without runtime or asset failures",
+      "result": "pass",
+      "live": true,
+      "detail": {
+        "previews": [
+          "Badge preview",
+          "Button preview",
+          "Chip preview",
+          "SegmentedControl preview",
+          "Input preview",
+          "Switch preview",
+          "BranchNode preview",
+          "Canvas preview",
+          "MiniMap preview",
+          "Node preview",
+          "Inspector preview",
+          "Palette preview",
+          "Chat preview",
+          "CommandPalette preview",
+          "Header preview",
+          "ThemeToggle preview",
+          "Toolbar preview",
+          "BarChart preview",
+          "Bars preview",
+          "Card preview",
+          "DataTable preview",
+          "Distribution preview",
+          "EmptyState preview",
+          "Menu preview",
+          "PageHeader preview",
+          "StatTile preview",
+          "WorkflowCard preview",
+          "Dashboard preview"
+        ],
+        "errors": [],
+        "failedLocal": []
+      }
+    },
+    {
+      "name": "Reader navigates reference sections and uses embedded command search without moving the surrounding page",
+      "result": "pass",
+      "live": true,
+      "detail": {
+        "embeddedSearch": "filter, no matches, arrow keys, Enter on empty list, Escape",
+        "outerScrollUnchanged": true,
+        "sections": [
+          "Components",
+          "Colour",
+          "Type",
+          "Spacing",
+          "Radius",
+          "Shadow",
+          "Motion"
+        ]
+      }
+    },
+    {
+      "name": "User toggles enabled switches with mouse and keyboard while a disabled switch stays off and segmented choices stay exclusive",
+      "result": "pass",
+      "live": true,
+      "detail": "Mouse and keyboard update state; disabled and independent groups retain their boundaries"
+    },
+    {
+      "name": "User flips the preview theme and sees the saved theme after reload and on another preview",
+      "result": "pass",
+      "live": true,
+      "detail": "Dark theme persists across reload and Dashboard navigation"
+    },
+    {
+      "name": "Mobile reader browses all reference sections at 390 px without page-wide horizontal scrolling",
+      "result": "pass",
+      "live": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390
+      }
+    }
+  ],
+  "errors": [],
+  "failedLocal": [],
+  "shots": [
+    "design-desktop",
+    "preview-Badge",
+    "preview-Button",
+    "preview-Chip",
+    "preview-SegmentedControl",
+    "preview-Input",
+    "preview-Switch",
+    "preview-BranchNode",
+    "preview-Canvas",
+    "preview-MiniMap",
+    "preview-Node",
+    "preview-Inspector",
+    "preview-Palette",
+    "preview-Chat",
+    "preview-CommandPalette",
+    "preview-Header",
+    "preview-ThemeToggle",
+    "preview-Toolbar",
+    "preview-BarChart",
+    "preview-Bars",
+    "preview-Card",
+    "preview-DataTable",
+    "preview-Distribution",
+    "preview-EmptyState",
+    "preview-Menu",
+    "preview-PageHeader",
+    "preview-StatTile",
+    "preview-WorkflowCard",
+    "preview-Dashboard",
+    "embedded-command-search",
+    "reference-type",
+    "switch-state",
+    "theme-dark",
+    "dashboard-dark",
+    "design-mobile",
+    "components-mobile"
+  ]
+}

@@ -1,0 +1,327 @@
+[
+  {
+    "section": "Components",
+    "initialScroll": 5707,
+    "afterLazyPreviews": 5707
+  },
+  {
+    "section": "Colour",
+    "initialScroll": 24479,
+    "afterLazyPreviews": 24479
+  },
+  {
+    "section": "Type",
+    "initialScroll": 31904,
+    "afterLazyPreviews": 31904
+  },
+  {
+    "commandPalette": "Enter selects a matching command; backdrop dismisses"
+  },
+  {
+    "workflowCard": "Actions button opens menu; previously declined dismissal behavior excluded"
+  },
+  {
+    "mascotDownloads": [
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/petra.svg",
+        "status": 200,
+        "type": "image/svg+xml",
+        "bytes": 2980
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/petra.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 360058
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/petra.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 65278
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/petra.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 184371
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/petra.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 114530
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/pisa.svg",
+        "status": 200,
+        "type": "image/svg+xml",
+        "bytes": 3241
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/pisa.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 337456
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/pisa.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 70182
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/pisa.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 170493
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/pisa.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 107308
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/kyoto.svg",
+        "status": 200,
+        "type": "image/svg+xml",
+        "bytes": 3313
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/kyoto.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 317273
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/kyoto.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 82013
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/kyoto.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 172519
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/kyoto.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 118052
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/rio.svg",
+        "status": 200,
+        "type": "image/svg+xml",
+        "bytes": 3016
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/rio.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 443315
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/rio.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 66720
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/rio.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 187669
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/rio.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 97624
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/zurich.svg",
+        "status": 200,
+        "type": "image/svg+xml",
+        "bytes": 2908
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/zurich.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 418929
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/zurich.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 74447
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/zurich.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 190422
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/zurich.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 99409
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/giza.svg",
+        "status": 200,
+        "type": "image/svg+xml",
+        "bytes": 3218
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/giza.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 379364
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/giza.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 69590
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/giza.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 171415
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/giza.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 97660
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/machu.svg",
+        "status": 200,
+        "type": "image/svg+xml",
+        "bytes": 2893
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/machu.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 445608
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/machu.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 64773
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/machu.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 208406
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/machu.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 119082
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/angkor.svg",
+        "status": 200,
+        "type": "image/svg+xml",
+        "bytes": 3312
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/angkor.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 312074
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/angkor.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 64707
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/angkor.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 172120
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/angkor.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 111269
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/delphi.svg",
+        "status": 200,
+        "type": "image/svg+xml",
+        "bytes": 3549
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/delphi.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 297956
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/delphi.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 68304
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/delphi.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 163206
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/delphi.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 110625
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/sydney.svg",
+        "status": 200,
+        "type": "image/svg+xml",
+        "bytes": 3244
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/sydney.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 424993
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/sydney.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 70167
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/sydney.png",
+        "status": 200,
+        "type": "image/png",
+        "bytes": 184514
+      },
+      {
+        "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/sydney.jpg",
+        "status": 200,
+        "type": "image/jpeg",
+        "bytes": 100371
+      }
+    ]
+  }
+]
