@@ -37,7 +37,7 @@
 	},
 	"devDependencies": {
 		"@axe-core/playwright": "^4.14.0",
-		"@biomejs/biome": "2.6.4",
+		"@biomejs/biome": "2.6.5",
 		"@neondatabase/serverless": "1.2.0",
 		"@playwright/test": "^1.64.1",
 		"@tensquads/adapters": "*",
@@ -45,10 +45,10 @@
 		"@tensquads/kernel": "*",
 		"@types/node": "^24.19.2",
 		"esbuild": "^0.28.2",
-		"fallow": "3.37.0",
+		"fallow": "3.39.0",
 		"husky": "^9.1.7",
 		"miniflare": "5.20261023.1-beta",
-		"pg-connection-string": "2.5.0",
+		"pg-connection-string": "2.14.1",
 		"typescript": "7.0.2",
 		"yaml": "2.9.1"
 	},
