@@ -633,11 +633,17 @@ th:first-child,td:first-child{padding-left:20px}th:last-child,td:last-child{padd
 	var links = [].slice.call(document.querySelectorAll(".side nav a[href^='#']"));
 	var side = document.getElementById("side");
 	var menuBtn = document.querySelector(".menu-btn");
+	var mobile = window.matchMedia("(max-width:860px)");
+	var input = side.querySelector("input");
 	// Older links to this page used these names.
 	var OLD = { mascot: "mascots", principles: "overview", colour: "colors", type: "typography", radius: "radius", shadow: "shadows", motion: "easing", "data-display": "components" };
 	function setMenu(open) {
 		document.body.classList.toggle("menu", open);
 		menuBtn.setAttribute("aria-expanded", String(open));
+		side.inert = mobile.matches && !open;
+		document.querySelector("main").inert = open;
+		document.querySelector(".topbar").inert = open;
+		if (open) input.focus();
 	}
 	function show(moveFocus) {
 		var hash = decodeURIComponent(location.hash.slice(1)) || "overview";
@@ -663,9 +669,10 @@ th:first-child,td:first-child{padding-left:20px}th:last-child,td:last-child{padd
 	show(false);
 	menuBtn.addEventListener("click", function () { setMenu(!document.body.classList.contains("menu")); });
 	document.querySelector(".scrim").addEventListener("click", function () { setMenu(false); });
+	mobile.addEventListener("change", function () { setMenu(false); });
+	links.concat(side.querySelector(".brand")).forEach(function (a) { a.addEventListener("click", function () { setMenu(false); }); });
 	document.addEventListener("keydown", function (e) { if (e.key === "Escape" && document.body.classList.contains("menu")) { setMenu(false); menuBtn.focus(); } });
 	// The search box filters the menu. Enter opens the first match.
-	var input = side.querySelector("input");
 	input.addEventListener("input", function () {
 		var q = input.value.trim().toLowerCase();
 		side.classList.toggle("searching", q !== "");
@@ -689,7 +696,10 @@ th:first-child,td:first-child{padding-left:20px}th:last-child,td:last-child{padd
 	input.addEventListener("keydown", function (e) {
 		if (e.key !== "Enter") return;
 		var first = [].slice.call(side.querySelectorAll(".main-nav a")).filter(function (a) { return a.offsetParent !== null && (a.closest(".subnav") || !side.classList.contains("searching") || a.dataset.q.toLowerCase().indexOf(input.value.trim().toLowerCase()) !== -1); })[0];
-		if (first) location.hash = first.getAttribute("href");
+		if (first) {
+			location.hash = first.getAttribute("href");
+			setMenu(false);
+		}
 	});
 })();
 </script>
