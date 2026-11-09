@@ -1,0 +1,146 @@
+{
+  "results": [
+    {
+      "name": "Desktop sidebar opens every foundation and component, renders previews, and preserves browser history",
+      "result": "pass",
+      "detail": {
+        "foundations": 8,
+        "componentPreviews": 28,
+        "switchToggled": true,
+        "historyRestoresView": true
+      }
+    },
+    {
+      "name": "Search filters nested navigation, opens a result with Enter, and recovers from no matches",
+      "result": "pass",
+      "detail": {
+        "caseInsensitive": true,
+        "nestedResult": true,
+        "emptySearchKeepsCurrentPage": true,
+        "clearRestoresMenu": true
+      }
+    },
+    {
+      "name": "Legacy and unknown fragment links resolve to usable design-system pages",
+      "result": "pass",
+      "detail": {
+        "mascot": "Mascots",
+        "principles": "Overview",
+        "colour": "Colors",
+        "type": "Typography",
+        "radius": "Corner radius",
+        "shadow": "Shadows",
+        "motion": "Easing",
+        "data-display": "Components",
+        "not-a-page": "Overview"
+      }
+    },
+    {
+      "name": "Mascot gallery renders all ten characters and exposes asset downloads",
+      "result": "pass",
+      "detail": {
+        "mascotNames": [
+          "Petra",
+          "Pisa",
+          "Kyoto",
+          "Rio",
+          "Zurich",
+          "Giza",
+          "Machu",
+          "Angkor",
+          "Delphi",
+          "Sydney"
+        ],
+        "downloadLinks": 50
+      }
+    },
+    {
+      "name": "Mobile drawer opens with search focused, isolates page controls, and closes via Escape or scrim",
+      "result": "pass",
+      "detail": {
+        "searchFocusedOnOpen": true,
+        "coveredPageInert": true,
+        "tabStaysInDrawer": true,
+        "closedDrawerSkipped": true,
+        "escapeRestoresMenuFocus": true,
+        "scrimCloses": true
+      }
+    },
+    {
+      "name": "Mobile current-page links, brand, and same-result search dismiss the drawer without a hash change",
+      "result": "pass",
+      "detail": {
+        "brandAtOverviewCloses": true,
+        "currentColorsLinkCloses": true,
+        "currentSearchResultCloses": true
+      }
+    },
+    {
+      "name": "Responsive pages fit 390px and resizing an open drawer restores desktop navigation",
+      "result": "pass",
+      "detail": {
+        "widths": [
+          {
+            "hash": "overview",
+            "page": 390,
+            "viewport": 390
+          },
+          {
+            "hash": "colors",
+            "page": 390,
+            "viewport": 390
+          },
+          {
+            "hash": "typography",
+            "page": 390,
+            "viewport": 390
+          },
+          {
+            "hash": "spacing",
+            "page": 390,
+            "viewport": 390
+          },
+          {
+            "hash": "radius",
+            "page": 390,
+            "viewport": 390
+          },
+          {
+            "hash": "shadows",
+            "page": 390,
+            "viewport": 390
+          },
+          {
+            "hash": "easing",
+            "page": 390,
+            "viewport": 390
+          },
+          {
+            "hash": "duration",
+            "page": 390,
+            "viewport": 390
+          },
+          {
+            "hash": "components",
+            "page": 390,
+            "viewport": 390
+          },
+          {
+            "hash": "components/Button",
+            "page": 390,
+            "viewport": 390
+          },
+          {
+            "hash": "mascots",
+            "page": 390,
+            "viewport": 390
+          }
+        ],
+        "desktopNavigationRestored": true,
+        "mobileDrawerClosedOnReturn": true
+      }
+    }
+  ],
+  "errors": [],
+  "requests": []
+}
