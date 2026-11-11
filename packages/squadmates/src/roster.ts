@@ -26,7 +26,8 @@ export type SquadmateProp =
 	| "glasses"
 	| "hardhat"
 	| "monocle"
-	| "badge";
+	| "badge"
+	| "map";
 
 export type Squadmate = {
 	readonly id: string;
@@ -153,6 +154,18 @@ export const SQUADMATES = [
 		body: "#34b98c",
 		prop: "badge",
 		line: "Hires people and runs onboarding.",
+	},
+	// Places has no agent image in the design yet. It reuses Finance's design tint.
+	{
+		id: "places",
+		name: "Greenwich",
+		place: "Greenwich, London",
+		roleTag: "Places",
+		role: "Places",
+		tint: "#ffefa4",
+		body: "#a8b824",
+		prop: "map",
+		line: "Keeps the business on Google Maps and the other maps.",
 	},
 ] as const satisfies readonly Squadmate[];
 
