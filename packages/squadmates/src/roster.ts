@@ -27,7 +27,9 @@ export type SquadmateProp =
 	| "hardhat"
 	| "monocle"
 	| "badge"
-	| "map";
+	| "map"
+	| "tag"
+	| "oar";
 
 export type Squadmate = {
 	readonly id: string;
@@ -64,7 +66,7 @@ export const SQUADMATES = [
 		tint: "#e7efff",
 		body: "#5b8def",
 		prop: "cap",
-		line: "Fulfils orders and chases tracking numbers.",
+		line: "Takes orders from every channel, ships them and handles returns.",
 	},
 	{
 		id: "support",
@@ -166,6 +168,30 @@ export const SQUADMATES = [
 		body: "#a8b824",
 		prop: "map",
 		line: "Keeps the business on Google Maps and the other maps.",
+	},
+	// Catalog has no agent image in the design yet. It reuses Marketing's design tint.
+	{
+		id: "catalog",
+		name: "Alexandria",
+		place: "Alexandria, Egypt",
+		roleTag: "Catalog",
+		role: "Catalog",
+		tint: "#ece3ff",
+		body: "#4f56c4",
+		prop: "tag",
+		line: "Keeps every product, title, photo, variant and price correct.",
+	},
+	// Channels has no agent image in the design yet. It reuses Market researcher's design tint.
+	{
+		id: "channels",
+		name: "Venice",
+		place: "Venice, Italy",
+		roleTag: "Channels",
+		role: "Channels",
+		tint: "#fde2f3",
+		body: "#c9529c",
+		prop: "oar",
+		line: "Lists the products on every sales channel and keeps stock and prices in step.",
 	},
 ] as const satisfies readonly Squadmate[];
 
