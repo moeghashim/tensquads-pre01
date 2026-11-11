@@ -1,0 +1,32 @@
+[
+  {
+    "format": "SVG",
+    "keyboard": "Enter",
+    "status": 200,
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/greenwich.svg"
+  },
+  {
+    "format": "PNG",
+    "keyboard": "Enter",
+    "status": 200,
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/greenwich.png"
+  },
+  {
+    "format": "JPEG",
+    "keyboard": "Enter",
+    "status": 200,
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/greenwich.jpg"
+  },
+  {
+    "format": "Card PNG",
+    "keyboard": "Enter",
+    "status": 200,
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/greenwich.png"
+  },
+  {
+    "format": "Card JPEG",
+    "keyboard": "Enter",
+    "status": 200,
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/greenwich.jpg"
+  }
+]

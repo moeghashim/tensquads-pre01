@@ -1,0 +1,86 @@
+{
+  "desktop": {
+    "cards": 11,
+    "title": "Mascots · tensquads design system",
+    "greenwich": "Greenwich\nPlaces\nSHAPE\nAn observatory dome with an open shutter slit and a red time ball on top, like the Royal Observatory at Greenwich.\nWHY IT FITS\nEvery map starts at the meridian in Greenwich. Greenwich keeps the business on Google Maps and the other maps, correct and easy to find.\nPOSE\nHolds up a folded map.\nCOLOUR\nMeridian lime"
+  },
+  "assets": [
+    {
+      "name": "SVG",
+      "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/greenwich.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 3868,
+      "dimensions": []
+    },
+    {
+      "name": "PNG",
+      "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/greenwich.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 381220,
+      "dimensions": [
+        {
+          "width": 1200,
+          "height": 1480,
+          "complete": true
+        }
+      ]
+    },
+    {
+      "name": "JPEG",
+      "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/greenwich.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 71511,
+      "dimensions": [
+        {
+          "width": 1200,
+          "height": 1480,
+          "complete": true
+        }
+      ]
+    },
+    {
+      "name": "Card PNG",
+      "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/greenwich.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 214415,
+      "dimensions": [
+        {
+          "width": 1200,
+          "height": 1800,
+          "complete": true
+        }
+      ]
+    },
+    {
+      "name": "Card JPEG",
+      "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/greenwich.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 141678,
+      "dimensions": [
+        {
+          "width": 1200,
+          "height": 1800,
+          "complete": true
+        }
+      ]
+    }
+  ],
+  "mobile": {
+    "viewport": 390,
+    "width": 390,
+    "card": {
+      "x": 32,
+      "y": 179.84375,
+      "width": 326,
+      "height": 489
+    },
+    "menuExpanded": "false",
+    "noMatchRecovery": true
+  },
+  "errors": []
+}
