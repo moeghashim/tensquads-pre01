@@ -25,6 +25,8 @@ const TASK_TABLE: readonly (readonly [string, string, string, string | null])[] 
 	["analytics", "Delphi", "Delphi, Greece", "Analytics"],
 	["hr", "Sydney", "Sydney, Australia", "People"],
 	["places", "Greenwich", "Greenwich, London", "Places"],
+	["catalog", "Alexandria", "Alexandria, Egypt", "Catalog"],
+	["channels", "Venice", "Venice, Italy", "Channels"],
 ];
 
 test("the roster is the task table", () => {
