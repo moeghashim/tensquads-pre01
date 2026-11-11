@@ -1,0 +1,72 @@
+[
+  {
+    "label": "SVG",
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/alexandria.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "bytes": 4184
+  },
+  {
+    "label": "PNG",
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/alexandria.png",
+    "status": 200,
+    "type": "image/png",
+    "bytes": 287079
+  },
+  {
+    "label": "JPEG",
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/alexandria.jpg",
+    "status": 200,
+    "type": "image/jpeg",
+    "bytes": 65468
+  },
+  {
+    "label": "Card PNG",
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/alexandria.png",
+    "status": 200,
+    "type": "image/png",
+    "bytes": 183150
+  },
+  {
+    "label": "Card JPEG",
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/alexandria.jpg",
+    "status": 200,
+    "type": "image/jpeg",
+    "bytes": 138493
+  },
+  {
+    "label": "SVG",
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/venice.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "bytes": 3801
+  },
+  {
+    "label": "PNG",
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/venice.png",
+    "status": 200,
+    "type": "image/png",
+    "bytes": 310982
+  },
+  {
+    "label": "JPEG",
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/venice.jpg",
+    "status": 200,
+    "type": "image/jpeg",
+    "bytes": 74397
+  },
+  {
+    "label": "Card PNG",
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/venice.png",
+    "status": 200,
+    "type": "image/png",
+    "bytes": 190577
+  },
+  {
+    "label": "Card JPEG",
+    "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/venice.jpg",
+    "status": 200,
+    "type": "image/jpeg",
+    "bytes": 143399
+  }
+]

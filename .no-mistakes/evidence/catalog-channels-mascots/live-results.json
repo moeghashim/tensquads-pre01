@@ -1,0 +1,142 @@
+{
+  "results": [
+    {
+      "name": "Public design cards show Alexandria, Venice and expanded Pisa copy",
+      "result": "pass",
+      "cards": 13,
+      "pisa": "Pisa\nOrders\nSHAPE\nA round tower with arcade bands and a bell top. It leans a little, like the tower at Pisa.\nWHY IT FITS\nPisa takes orders from every channel, carries them out of the door and handles returns. The lean makes it look busy and on the move.\nPOSE\nCarries a parcel.\nCOLOUR\nMarble blue"
+    },
+    {
+      "name": "Public asset download links return real images in every advertised format",
+      "result": "pass",
+      "downloads": [
+        {
+          "label": "SVG",
+          "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/alexandria.svg",
+          "status": 200,
+          "type": "image/svg+xml",
+          "bytes": 4184
+        },
+        {
+          "label": "PNG",
+          "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/alexandria.png",
+          "status": 200,
+          "type": "image/png",
+          "bytes": 287079
+        },
+        {
+          "label": "JPEG",
+          "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/alexandria.jpg",
+          "status": 200,
+          "type": "image/jpeg",
+          "bytes": 65468
+        },
+        {
+          "label": "Card PNG",
+          "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/alexandria.png",
+          "status": 200,
+          "type": "image/png",
+          "bytes": 183150
+        },
+        {
+          "label": "Card JPEG",
+          "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/alexandria.jpg",
+          "status": 200,
+          "type": "image/jpeg",
+          "bytes": 138493
+        },
+        {
+          "label": "SVG",
+          "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/svg/venice.svg",
+          "status": 200,
+          "type": "image/svg+xml",
+          "bytes": 3801
+        },
+        {
+          "label": "PNG",
+          "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/png/venice.png",
+          "status": 200,
+          "type": "image/png",
+          "bytes": 310982
+        },
+        {
+          "label": "JPEG",
+          "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/jpeg/venice.jpg",
+          "status": 200,
+          "type": "image/jpeg",
+          "bytes": 74397
+        },
+        {
+          "label": "Card PNG",
+          "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/png/venice.png",
+          "status": 200,
+          "type": "image/png",
+          "bytes": 190577
+        },
+        {
+          "label": "Card JPEG",
+          "url": "https://raw.githubusercontent.com/moeghashim/tensquads-design-system/main/mascots/cards/jpeg/venice.jpg",
+          "status": 200,
+          "type": "image/jpeg",
+          "bytes": 143399
+        }
+      ]
+    },
+    {
+      "name": "App character review renders both new mascots and updated Pisa description",
+      "result": "pass",
+      "cards": 13
+    },
+    {
+      "name": "New cards remain readable at 390px without horizontal page scroll",
+      "result": "pass",
+      "widths": [
+        {
+          "path": "/design/",
+          "viewport": 390,
+          "content": 390
+        },
+        {
+          "path": "/review/characters",
+          "viewport": 390,
+          "content": 390
+        }
+      ]
+    },
+    {
+      "name": "Sign-up keeps the new characters out of selectable functional squads",
+      "result": "pass",
+      "choices": [
+        {
+          "kind": "/A new business/",
+          "choices": [
+            "PisaOrders · Fulfilment and trackingReady for your first order",
+            "KyotoSupport · Customer inbox and refundsReplies in your voice, refunds under a limit you set",
+            "RioMarketing · Ads, social and emailDrafts your launch campaign and first posts",
+            "ZurichFinance · Payouts, costs and profitWeekly profit summary, bills matched to orders",
+            "GizaInventory · Stock and suppliersAdd once you hold stock",
+            "MachuMarket researcher · Competitors and positioningFinds your competitors before you launch",
+            "AngkorWebsite builder · Landing pages and site updatesBuilds your first landing page from the market report"
+          ]
+        },
+        {
+          "kind": "/An existing business/",
+          "choices": [
+            "PisaOrders · Fulfilment and trackingSyncs tracking and chases the maker",
+            "KyotoSupport · Customer inbox and refundsReplies in your voice, refunds under a limit you set",
+            "RioMarketing · Ads, social and emailWatches ad spend and return",
+            "ZurichFinance · Payouts, costs and profitWeekly profit summary, bills matched to orders",
+            "GizaInventory · Stock and suppliersFlags low stock and drafts reorders",
+            "MachuMarket researcher · Competitors and positioningWatches how your competitors price and sell",
+            "AngkorWebsite builder · Landing pages and site updatesUpdates your site from the market report"
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "notes": [
+    "Configured npm ci && npm test was reported failed before this phase. The full suite was not repeated, per phase scope.",
+    "Driver retries corrected hidden Mascots navigation, mobile off-canvas navigation, Pisa copy wording, React hydration timing, and compound accessible-name selectors. Final live checks passed."
+  ]
+}

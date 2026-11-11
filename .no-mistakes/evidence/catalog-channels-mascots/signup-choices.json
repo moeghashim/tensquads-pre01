@@ -1,0 +1,30 @@
+{
+  "result": "pass",
+  "choices": [
+    {
+      "kind": "/A new business/",
+      "choices": [
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\nPisaOrders · Fulfilment and trackingReady for your first order",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\nKyotoSupport · Customer inbox and refundsReplies in your voice, refunds under a limit you set",
+        "\n\n\n\n\n\n\n\n\n\n\nRioMarketing · Ads, social and emailDrafts your launch campaign and first posts",
+        "\n\n\n\n\n\n\n\n\n\n\nZurichFinance · Payouts, costs and profitWeekly profit summary, bills matched to orders",
+        "\n\n\n\n\n\n\n\n\n\n\nGizaInventory · Stock and suppliersAdd once you hold stock",
+        "\n\n\n\n\n\n\n\n\nMachuMarket researcher · Competitors and positioningFinds your competitors before you launch",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\nAngkorWebsite builder · Landing pages and site updatesBuilds your first landing page from the market report"
+      ]
+    },
+    {
+      "kind": "/An existing business/",
+      "choices": [
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\nPisaOrders · Fulfilment and trackingSyncs tracking and chases the maker",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\nKyotoSupport · Customer inbox and refundsReplies in your voice, refunds under a limit you set",
+        "\n\n\n\n\n\n\n\n\n\n\nRioMarketing · Ads, social and emailWatches ad spend and return",
+        "\n\n\n\n\n\n\n\n\n\n\nZurichFinance · Payouts, costs and profitWeekly profit summary, bills matched to orders",
+        "\n\n\n\n\n\n\n\n\n\n\nGizaInventory · Stock and suppliersFlags low stock and drafts reorders",
+        "\n\n\n\n\n\n\n\n\nMachuMarket researcher · Competitors and positioningWatches how your competitors price and sell",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\nAngkorWebsite builder · Landing pages and site updatesUpdates your site from the market report"
+      ]
+    }
+  ],
+  "errors": []
+}
