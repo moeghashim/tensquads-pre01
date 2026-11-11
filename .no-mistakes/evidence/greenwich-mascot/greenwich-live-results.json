@@ -1,0 +1,67 @@
+{
+  "url": "http://127.0.0.1:53213",
+  "review": [
+    {
+      "width": 1440,
+      "cardText": "Greenwich\nPlaces\n\nNamed after Greenwich, London\n\nKeeps the business on Google Maps and the other maps.",
+      "viewport": 1440,
+      "document": 1440,
+      "card": {
+        "x": 727,
+        "y": 1015,
+        "width": 234.5,
+        "height": 275,
+        "top": 1015,
+        "right": 961.5,
+        "bottom": 1290,
+        "left": 727
+      }
+    },
+    {
+      "width": 390,
+      "cardText": "Greenwich\nPlaces\n\nNamed after Greenwich, London\n\nKeeps the business on Google Maps and the other maps.",
+      "viewport": 390,
+      "document": 390,
+      "card": {
+        "x": 24,
+        "y": 3305,
+        "width": 342,
+        "height": 275,
+        "top": 3305,
+        "right": 366,
+        "bottom": 3580,
+        "left": 24
+      }
+    }
+  ],
+  "renderer": {
+    "states": [
+      "idle",
+      "waiting",
+      "planning",
+      "running",
+      "checking",
+      "done",
+      "sentback",
+      "blocked",
+      "escalated",
+      "dropped"
+    ],
+    "sizes": [
+      16,
+      24,
+      32,
+      48,
+      63,
+      64,
+      96,
+      112,
+      256
+    ],
+    "gradientReferencesResolved": true,
+    "characterName": "Greenwich",
+    "roleTag": "Places",
+    "invalidInputs": "Unknown state and unknown image rejected with typed errors"
+  },
+  "errors": []
+}
